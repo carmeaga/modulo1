@@ -27,7 +27,7 @@ public class calificacionesvalidacion {
 			}
 			else {
 				System.out.println ("Escribir una calificacion valida (5-10)");
-				calificacion.sc.nextDouble();
+				//calificacion.sc.nextDouble();
 			}
 			System.out.println("Escribir una calificacion (-1 para salir");
 			calificacion = sc.nextDouble();//lee entrada de teclado
