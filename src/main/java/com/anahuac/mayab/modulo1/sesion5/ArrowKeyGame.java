@@ -8,7 +8,7 @@ public class ArrowKeyGame extends JFrame {
 
 	private JPanel player;
 
-	private final int STEP = 15; // Tamaño del movimiento
+	private final int STEP = 40; // Tamaño del movimiento
 
 	public ArrowKeyGame() {
 
@@ -20,7 +20,7 @@ public class ArrowKeyGame extends JFrame {
 // Crear el objeto del jugador
 		player = new JPanel();
 		player.setBackground(Color.CYAN);
-		player.setBounds(180, 180, 15, 15); // Tamaño inicial y posición
+		player.setBounds(180, 180, 40, 40); // Tamaño inicial y posición
 		add(player);
 // Añadir KeyListener al JFrame
 		addKeyListener(new KeyListener() {
@@ -52,8 +52,8 @@ public class ArrowKeyGame extends JFrame {
 		int x = player.getX() + dx;
 		int y = player.getY() + dy;
 // Limitar el movimiento dentro de la ventana
-		if (x >= 0 && x + player.getWidth() <= getWidth() &&
-				y >= 0 && y + player.getHeight() <= getHeight()) {
+		if (x >= 0 && x + player.getWidth() <= getWidth() -STEP &&
+			y >= 0 && y + player.getHeight() <= getHeight()-STEP) {
 			player.setLocation(x, y);
 }
 }
